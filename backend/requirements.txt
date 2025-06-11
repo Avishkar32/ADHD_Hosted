@@ -1,4 +1,0 @@
-numpy
-pandas
-scikit-learn
-# Add any other libraries your model.py uses
