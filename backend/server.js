@@ -6,7 +6,10 @@ const app = express();
 const port = 5000;
 const path = require('path');
 
-app.use(cors());
+app.uapp.use(cors({
+  origin: '*'
+}));
+
 app.use(express.json());
 app.use(express.text()); // To handle text/plain input
 
