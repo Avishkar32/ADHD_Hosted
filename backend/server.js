@@ -48,7 +48,7 @@ app.post('/predict', (req, res) => {
 
     const jsonData = JSON.stringify(data);
     console.log('Step 5 - JSON Sent to Python:', jsonData); // Log JSON sent to model.py
-    const pythonProcess = spawn('python', ['model/model.py '], {
+    const pythonProcess = spawn('python', [path.join(__dirname, 'model', 'model.py')], {
         stdio: ['pipe', 'pipe', 'pipe']
     });
 
