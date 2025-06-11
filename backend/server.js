@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 const path = require('path');
 
-app.uapp.use(cors({
+app.use(cors({
   origin: '*'
 }));
 
