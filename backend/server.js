@@ -4,6 +4,7 @@ const { parse } = require('csv-parse/sync');
 const { spawn } = require('child_process');
 const app = express();
 const port = 5000;
+const path = require('path');
 
 app.use(cors());
 app.use(express.json());
