@@ -2,7 +2,7 @@ services:
   - type: web
     name: adhd-backend
     env: node
-    rootDir: .                # ✅ Because render.yaml is inside backend
-    buildCommand: .render/build.sh && npm install
+    rootDir: .
+    buildCommand: bash build.sh && npm install
     startCommand: npm start
     plan: free
