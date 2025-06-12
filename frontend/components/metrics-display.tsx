@@ -64,7 +64,7 @@ export default function MetricsDisplay({
   );
   const [isLoading, setIsLoading] = useState(false);
 
-  const totalPlayTime = metrics.reduce((sum, metric) => sum + (metric.playtime_min || 0), 0);
+  const totalPlayTime = metrics.reduce((sum, metric) => sum + (metric.playtime_min || 0), 0).toFixed(2);
 
   // Aggregate metrics for CSV and display
   const aggregateMetrics = () => {
