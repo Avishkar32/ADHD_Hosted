@@ -3,10 +3,10 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { SpaceBackground } from "../components/space-background"; // Updated import
 
-export default function ResultPage() {
+function ResultContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [prediction, setPrediction] = useState<string>("Loading...");
@@ -47,5 +47,13 @@ export default function ResultPage() {
         </Card>
       </div>
     </>
+  );
+}
+
+export default function ResultPage() {
+  return (
+    <Suspense>
+      <ResultContent />
+    </Suspense>
   );
 }
